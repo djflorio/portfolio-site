@@ -61,12 +61,12 @@ class Main extends React.Component {
             computer programmer  who writes and records music about dirt,
             nostalgia, dreams, animals, and bodies of water.
           </p>
-          <div className="main__scroll">
-            <FontAwesomeIcon
-              icon={chevronDown}
-              className="main__scroll-circle"
-            />
-          </div>
+        </div>
+        <div className="main__scroll">
+          <FontAwesomeIcon
+            icon={chevronDown}
+            className="main__scroll-circle"
+          />
         </div>
       </section>
     );
