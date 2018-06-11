@@ -6,31 +6,6 @@ import chevronDown from '@fortawesome/fontawesome-free-solid/faChevronCircleDown
 
 class Main extends React.Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      scrollY: 0
-    };
-
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
-  componentDidMount() {
-    this.setState({
-      scrollY: window.scrollY
-    });
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll() {
-    window.requestAnimationFrame(() => {
-      this.setState({
-        scrollY: window.scrollY
-      });
-    });
-  }
-
   render() {
 
     const mainStyle = {
@@ -38,15 +13,15 @@ class Main extends React.Component {
     };
 
     const textStyle = {
-      marginLeft: -0.5 * this.state.scrollY
+      marginLeft: -0.5 * this.props.scrollY
     }
 
     const titleStyle = {
-      marginLeft: -0.3 * this.state.scrollY
+      marginLeft: -0.3 * this.props.scrollY
     }
 
     const sunStyle = {
-      marginLeft: 0.4 * this.state.scrollY
+      marginLeft: 0.4 * this.props.scrollY
     }
 
     return (
