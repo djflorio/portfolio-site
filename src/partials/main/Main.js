@@ -37,16 +37,20 @@ class Main extends React.Component {
     };
 
     const textStyle = {
-      marginTop: -0.5 * this.state.scrollY
+      marginLeft: -0.5 * this.state.scrollY
     }
 
     const titleStyle = {
-      marginTop: -0.3 * this.state.scrollY
+      marginLeft: -0.3 * this.state.scrollY
+    }
+
+    const sunStyle = {
+      marginLeft: 0.4 * this.state.scrollY
     }
 
     return (
       <section className="main" style={mainStyle}>
-        <span className="main__sun"></span>
+        <span className="main__sun" style={sunStyle}></span>
         <div className="main__content">
           <h1 className="main__title" style={titleStyle}>
             dan florio

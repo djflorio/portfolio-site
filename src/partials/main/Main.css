@@ -7,6 +7,7 @@
   animation-duration: 4s;
   animation-name: sunrise;
   z-index: -1;
+  transition: 3s;
 }
 
 .main__content {
@@ -46,7 +47,7 @@
 
 .main__text {
   position: absolute;
-  top: 380px;
+  top: 345px;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   animation-duration: 2s;
