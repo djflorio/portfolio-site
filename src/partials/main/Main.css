@@ -56,6 +56,17 @@
   max-width: 600px;
 }
 
+.main__scroll {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  background-color: red;
+}
+
+.main__scroll-circle {
+  font-size: 50px;
+}
+
 @keyframes slidedown {
   from {
     top: 0;

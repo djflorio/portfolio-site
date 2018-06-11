@@ -1,7 +1,8 @@
 import React from 'react';
 import './Main.css';
 
-import _ from 'lodash';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import chevronDown from '@fortawesome/fontawesome-free-solid/faChevronCircleDown';
 
 class Main extends React.Component {
 
@@ -60,12 +61,12 @@ class Main extends React.Component {
             computer programmer  who writes and records music about dirt,
             nostalgia, dreams, animals, and bodies of water.
           </p>
-        </div>
-        
-        <div className="main__scroll">
-          <span className="main__scroll-circle">
-
-          </span>
+          <div className="main__scroll">
+            <FontAwesomeIcon
+              icon={chevronDown}
+              className="main__scroll-circle"
+            />
+          </div>
         </div>
       </section>
     );
