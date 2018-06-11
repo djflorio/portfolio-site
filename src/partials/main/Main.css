@@ -1,0 +1,104 @@
+.main {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #65b0db;
+  animation-duration: 4s;
+  animation-name: sunrise;
+  z-index: -1;
+}
+
+.main__content {
+  position: relative;
+  height: 100%;
+  background-image: url('./img/trees.png');
+  background-position: top left;
+  background-repeat: repeat-x;
+  background-size: 1000px;
+  padding: 30px;
+  z-index: 2;
+}
+
+.main__sun {
+  position: absolute;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  top: 235px;
+  left: 23px;
+  background-color: rgb(235, 204, 119);
+  border-radius: 50%;
+  animation-duration: 4s;
+  animation-name: slidedown2;
+  z-index: 1;
+}
+
+.main__title {
+  position: absolute;
+  top: 260px;
+  margin: 0;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 70px;
+  animation-duration: 1s;
+  animation-name: slidedown;
+}
+
+.main__text {
+  position: absolute;
+  top: 380px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  animation-duration: 2s;
+  animation-name: fadein;
+  display: inline-block;
+  max-width: 600px;
+}
+
+@keyframes slidedown {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    top: 260px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidedown2 {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+
+  to {
+    top: 235px;
+    opacity: 1;
+  }
+}
+
+@keyframes sunrise {
+  from {
+    background-color: #080f2e;
+  }
+
+  to {
+    background-color: #65b0db;
+  }
+}
