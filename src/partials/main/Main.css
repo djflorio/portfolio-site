@@ -49,7 +49,6 @@
 .main__text {
   position: absolute;
   top: 345px;
-  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   animation-duration: 2s;
   animation-name: fadein;

@@ -1,6 +1,5 @@
 .music {
-  padding: 60px;
-  min-height: 600px;
+  padding: 50px;
   background-color: #111;
   color: #efefef;
 }
@@ -8,12 +7,34 @@
 .albums {
   list-style: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  transition: 1s;
+}
+
+.album {
+  background-color: #1b1b1b;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.album:last-child {
+  margin-bottom: 0;
 }
 
 .album__art {
-  width: 100%;
+  width: 150px;
+  vertical-align: middle;
+}
+
+.album__info {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.album__title {
+  margin: 0;
+}
+
+.album__year {
+  margin: 0;
 }
