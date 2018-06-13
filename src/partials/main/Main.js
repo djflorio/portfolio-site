@@ -6,10 +6,18 @@ import chevronDown from '@fortawesome/fontawesome-free-solid/faChevronCircleDown
 
 class Main extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      heroHeight: window.innerHeight
+    };
+  }
+
   render() {
 
     const mainStyle = {
-      height: window.innerHeight
+      height: this.state.heroHeight
     };
 
     const textStyle = {
