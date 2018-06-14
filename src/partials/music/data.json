@@ -1,0 +1,162 @@
+[
+  {
+    "id": "a1",
+    "title": "A Day Wiser",
+    "year": "2017",
+    "art": "./img/adaywiser.jpg",
+    "tracks": [
+      {
+        "id": "t1",
+        "title": "Coming My Way",
+        "file": ""
+      },
+      {
+        "id": "t2",
+        "title": "Dream of Mine",
+        "file": ""
+      },
+      {
+        "id": "t3",
+        "title": "Young Traveller",
+        "file": ""
+      },
+      {
+        "id": "t4",
+        "title": "White Tailed Hare",
+        "file": ""
+      }
+    ],
+    "links": [
+      {
+        "id": "l1",
+        "name": "Spotify",
+        "url": "https://open.spotify.com/album/5S3EkpAOUhFDpxk7ehDe9y"
+      },
+      {
+        "id": "l2",
+        "name": "iTunes",
+        "url": "https://itunes.apple.com/us/album/a-day-wiser-ep/1322832300"
+      },
+      {
+        "id": "l3",
+        "name": "Bandcamp",
+        "url": "https://danflorio.bandcamp.com/album/a-day-wiser"
+      }
+    ]
+  },
+  {
+    "id": "a2",
+    "title": "Malleability",
+    "year": "2014",
+    "art": "./img/malleability.jpg",
+    "tracks": [
+      {
+        "id": "t5",
+        "title": "Fleeting Embers",
+        "file": ""
+      },
+      {
+        "id": "t6",
+        "title": "Goldbricker",
+        "file": ""
+      },
+      {
+        "id": "t7",
+        "title": "Howls of Hounds",
+        "file": ""
+      },
+      {
+        "id": "t8",
+        "title": "Rations Running Low",
+        "file": ""
+      },
+      {
+        "id": "t9",
+        "title": "Dither",
+        "file": ""
+      },
+      {
+        "id": "t10",
+        "title": "Jaunted",
+        "file": ""
+      },
+      {
+        "id": "t11",
+        "title": "Empty Lane",
+        "file": ""
+      },
+      {
+        "id": "t12",
+        "title": "Balance and Precision",
+        "file": ""
+      }
+    ],
+    "links": [
+      {
+        "id": "l4",
+        "name": "Spotify",
+        "url": "https://open.spotify.com/album/2kdY6xgL3q070tVz31Bs9S"
+      },
+      {
+        "id": "l5",
+        "name": "iTunes",
+        "url": "https://itunes.apple.com/us/album/malleability/1147452902"
+      },
+      {
+        "id": "l6",
+        "name": "Bandcamp",
+        "url": "https://danflorio.bandcamp.com/album/malleability"
+      }
+    ]
+  },
+  {
+    "id": "a3",
+    "title": "Big Thoughts in a Small Place",
+    "year": "2012",
+    "art": "./img/bigthoughts.jpg",
+    "tracks": [
+      {
+        "id": "t13",
+        "title": "Clear as Day",
+        "file": ""
+      },
+      {
+        "id": "t14",
+        "title": "Passerby",
+        "file": ""
+      },
+      {
+        "id": "t15",
+        "title": "Jessamine & Park",
+        "file": ""
+      },
+      {
+        "id": "t16",
+        "title": "Brush it Off to the Wind",
+        "file": ""
+      },
+      {
+        "id": "t17",
+        "title": "So Sophisticated",
+        "file": ""
+      },
+      {
+        "id": "t18",
+        "title": "Letter and a Brick",
+        "file": ""
+      },
+      {
+        "id": "t19",
+        "title": "Abysmal Attitude",
+        "file": ""
+      }
+    ],
+    "links": [
+      {
+        "id": "l7",
+        "name": "Bandcamp",
+        "url": "https://danflorio.bandcamp.com/album/big-thoughts-in-a-small-place"
+      }
+    ]
+  }
+]
