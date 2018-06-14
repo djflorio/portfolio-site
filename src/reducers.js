@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
-export default combineReducers({
+import musicReducer from './partials/music/MusicReducer';
 
+export default combineReducers({
+  musicReducer
 });
