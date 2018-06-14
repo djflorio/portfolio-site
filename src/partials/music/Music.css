@@ -7,13 +7,9 @@
 .albums {
   list-style: none;
   padding: 0;
-}
-
-.album {
-  background-color: #1b1b1b;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
 
 .album:last-child {
@@ -21,7 +17,7 @@
 }
 
 .album__art {
-  width: 150px;
+  width: 100%;
   vertical-align: middle;
 }
 
