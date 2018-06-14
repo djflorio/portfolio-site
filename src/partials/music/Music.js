@@ -33,19 +33,21 @@ class Music extends React.Component {
 
     return (
       <section className="music" ref={this.albumRef}>
-        <Zoom cascade>
-        <ul className="albums">
-          <li className="album">
-            <img className="album__art" src={adaywiser} alt="a day wiser" />
-          </li>
-          <li className="album">
-            <img className="album__art" src={malleability} alt="a day wiser" />
-          </li>
-          <li className="album">
-            <img className="album__art" src={bigthoughts} alt="a day wiser" />
-          </li>
-        </ul>
-        </Zoom>
+        <div className="music__content">
+          <Zoom cascade>
+            <ul className="albums">
+              <li className="album">
+                <img className="album__art" src={adaywiser} alt="a day wiser" />
+              </li>
+              <li className="album">
+                <img className="album__art" src={malleability} alt="a day wiser" />
+              </li>
+              <li className="album">
+                <img className="album__art" src={bigthoughts} alt="a day wiser" />
+              </li>
+            </ul>
+          </Zoom>
+        </div>
       </section>
     );
   }
