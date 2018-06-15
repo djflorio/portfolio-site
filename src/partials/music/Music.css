@@ -9,21 +9,50 @@
   margin: auto;
 }
 
+.album {
+  position: relative;
+  cursor: pointer;
+}
+
 .albums {
   list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-.album:last-child {
-  margin-bottom: 0;
+  grid-gap: 15px;
 }
 
 .album__art {
+  position: relative;
   width: 100%;
   vertical-align: middle;
+  border-radius: 3%;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.album:hover .album__art {
+  opacity: 0.3;
+}
+
+.album:hover .album__record {
+  opacity: 1;
+}
+
+.album__record {
+  position: absolute;
+  width: 96%;
+  left: 2%;
+  top: 2%;
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0;
+  /*transform: rotate(0deg);
+  transform-origin: 50% 50%;*/
+}
+
+.album__art:hover .album__record {
+  opacity: 1;
 }
 
 .album__info {

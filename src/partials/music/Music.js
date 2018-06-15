@@ -18,6 +18,11 @@ const Music = (props) => {
                     src={album.art}
                     alt={album.title}
                   />
+                  <img
+                    className="album__record"
+                    src={album.record}
+                    alt="record"
+                  />
                 </li>
               ))
             }

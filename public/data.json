@@ -4,6 +4,7 @@
     "title": "A Day Wiser",
     "year": "2017",
     "art": "./img/adaywiser.jpg",
+    "record": "./img/adaywiserrecord.png",
     "tracks": [
       {
         "id": "t1",
@@ -49,6 +50,7 @@
     "title": "Malleability",
     "year": "2014",
     "art": "./img/malleability.jpg",
+    "record": "./img/malleabilityrecord.png",
     "tracks": [
       {
         "id": "t5",
@@ -114,6 +116,7 @@
     "title": "Big Thoughts in a Small Place",
     "year": "2012",
     "art": "./img/bigthoughts.jpg",
+    "record": "./img/bigthoughtsrecord.png",
     "tracks": [
       {
         "id": "t13",
