@@ -25,12 +25,9 @@ export const doFetch = () => {
       method: 'get',
       url: './data.json'
     }).then((res) => {
-      endFetch(res);
-      console.log(res);
-      //dispatch(endFetch(res));
+      dispatch(endFetch(res.data));
     }).catch((err) => {
-      failFetch();
-      console.error(err);
+      dispatch(failFetch());
     });
   }
 }

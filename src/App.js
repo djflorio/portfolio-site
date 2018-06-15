@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Main from './partials/main/Main';
-import Music from './partials/music/Music';
+import Music from './partials/music/MusicContainer';
 
 class App extends Component {
 
