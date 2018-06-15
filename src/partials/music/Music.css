@@ -47,8 +47,12 @@
   z-index: 1;
   transition: 0.5s;
   opacity: 0;
-  /*transform: rotate(0deg);
-  transform-origin: 50% 50%;*/
+  transform-origin: 50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /*animation-duration: 0.75s;*/
+  animation-duration: 7s;
+  animation-name: spin;
 }
 
 .album__art:hover .album__record {
@@ -67,4 +71,14 @@
 
 .album__year {
   margin: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
