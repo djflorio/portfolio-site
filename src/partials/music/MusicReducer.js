@@ -2,7 +2,8 @@ import * as actions from './MusicActions';
 
 export const defaultState = {
   fetching: false,
-  data: []
+  data: [],
+  currentAlbum: {}
 }
 
 const music = (state=defaultState, action) => {
@@ -24,6 +25,12 @@ const music = (state=defaultState, action) => {
       return {
         ...state,
         fetching: false
+      }
+    }
+    case actions.SET_ALBUM: {
+      return {
+        ...state,
+        currentAlbum: action.album
       }
     }
     default: return state;

@@ -31,11 +31,13 @@
   z-index: 1;
 }
 
-.album:hover .album__art {
+.album:hover .album__art,
+.album--open .album__art {
   opacity: 0.3;
 }
 
-.album:hover .album__record {
+.album:hover .album__record,
+.album--open .album__record {
   opacity: 1;
 }
 
@@ -50,9 +52,12 @@
   transform-origin: 50% 50%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  /*animation-duration: 0.75s;*/
   animation-duration: 7s;
   animation-name: spin;
+}
+
+.album--open .album__record {
+  animation-duration: 0.75s;
 }
 
 .album__art:hover .album__record {
