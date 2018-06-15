@@ -28,6 +28,13 @@ describe('Music', () => {
     });
   });
 
+  it('should create action to set current album', () => {
+    expect(actions.setAlbum("album")).toEqual({
+      type: actions.SET_ALBUM,
+      album: "album"
+    });
+  });
+
   it('should start fetch with startFetch', () => {
     expect(reducer(undefined, actions.startFetch())).toEqual({
       ...defaultState,
@@ -47,6 +54,13 @@ describe('Music', () => {
     expect(reducer(testState, actions.failFetch())).toEqual({
       ...testState,
       fetching: false
+    });
+  });
+
+  it('should set current album with setAlbum', () => {
+    expect(reducer(undefined, actions.setAlbum("album"))).toEqual({
+      ...defaultState,
+      currentAlbum: "album"
     });
   });
 
