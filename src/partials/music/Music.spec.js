@@ -1,6 +1,5 @@
 import * as actions from './MusicActions';
-import reducer from './MusicReducer';
-import { defaultState } from './MusicReducer';
+import reducer, { defaultState } from './MusicReducer';
 
 describe('Music', () => {
 
