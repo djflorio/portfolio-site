@@ -3,7 +3,8 @@ import * as actions from './PlayerActions';
 export const defaultState = {
   player: new Audio(),
   currentSong: {},
-  playing: false
+  playing: false,
+  visible: false
 }
 
 const player = (state=defaultState, action) => {
@@ -24,6 +25,12 @@ const player = (state=defaultState, action) => {
       return {
         ...state,
         playing: false
+      }
+    }
+    case actions.TOGGLE_PLAYER: {
+      return {
+        ...state,
+        visible: !state.visible
       }
     }
     default: return state;

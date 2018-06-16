@@ -5,13 +5,9 @@ import Player from './Player';
 import { loadSong, playSong } from './PlayerActions';
 
 class PlayerContainer extends React.Component {
-
-  componentDidMount() {
-    //this.props.onLoad("http://danflorio.com/uploads/audio/dreamofmine.mp3", this.props.player);
-  }
-
   render() {
     return (
+      this.props.visible &&
       <Player currentAlbum={this.props.currentAlbum} />
     );
   }
@@ -20,7 +16,8 @@ class PlayerContainer extends React.Component {
 function mapStateToProps(state) {
   return {
     currentAlbum: state.music.currentAlbum,
-    player: state.player.player
+    player: state.player.player,
+    visible: state.player.visible
   }
 }
 

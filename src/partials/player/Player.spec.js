@@ -24,6 +24,12 @@ describe('Player', () => {
     });
   });
 
+  it('should create action to toggle player', () => {
+    expect(actions.togglePlayer()).toEqual({
+      type: actions.TOGGLE_PLAYER
+    });
+  });
+
   it('should set current song with loadSong', () => {
     expect(reducer(undefined, actions.loadSong("song", testAudio))).toEqual({
       ...defaultState,
@@ -48,6 +54,27 @@ describe('Player', () => {
     expect(reducer(playingState, actions.pauseSong(testAudio))).toEqual({
       ...playingState,
       playing: false
+    });
+
+  });
+
+  it('should open player when closed with togglePlayer', () => {
+    expect(reducer(undefined, actions.togglePlayer())).toEqual({
+      ...defaultState,
+      visible: true
+    });
+  });
+
+  it('should close player when open with togglePlayer', () => {
+
+    const openState = {
+      ...defaultState,
+      visible: true
+    }
+
+    expect(reducer(openState, actions.togglePlayer())).toEqual({
+      ...openState,
+      visible: false
     });
 
   });
