@@ -3,8 +3,8 @@
     "id": "a1",
     "title": "A Day Wiser",
     "year": "2017",
-    "art": "./img/adaywiser.jpg",
-    "record": "./img/adaywiserrecord.png",
+    "art": "http://danflorio.com/uploads/img/adaywiser.jpg",
+    "record": "http://danflorio.com/uploads/img/adaywiserrecord.png",
     "tracks": [
       {
         "id": "t1",
@@ -49,8 +49,8 @@
     "id": "a2",
     "title": "Malleability",
     "year": "2014",
-    "art": "./img/malleability.jpg",
-    "record": "./img/malleabilityrecord.png",
+    "art": "http://danflorio.com/uploads/img/malleability.jpg",
+    "record": "http://danflorio.com/uploads/img/malleabilityrecord.png",
     "tracks": [
       {
         "id": "t5",
@@ -115,8 +115,8 @@
     "id": "a3",
     "title": "Big Thoughts in a Small Place",
     "year": "2012",
-    "art": "./img/bigthoughts.jpg",
-    "record": "./img/bigthoughtsrecord.png",
+    "art": "http://danflorio.com/uploads/img/bigthoughts.jpg",
+    "record": "http://danflorio.com/uploads/img/bigthoughtsrecord.png",
     "tracks": [
       {
         "id": "t13",
