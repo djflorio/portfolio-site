@@ -3,6 +3,7 @@ import './App.css';
 
 import Main from './partials/main/Main';
 import Music from './partials/music/MusicContainer';
+import Player from './partials/player/PlayerContainer';
 
 class App extends Component {
 
@@ -35,6 +36,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Player />
         <Main scrollY={this.state.scrollY} />
         <Music scrollY={this.state.scrollY} />
       </div>

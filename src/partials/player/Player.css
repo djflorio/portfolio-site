@@ -1,0 +1,9 @@
+.player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100px;
+  background-color: #111;
+  opacity: 0.8;
+}
