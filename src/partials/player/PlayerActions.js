@@ -4,7 +4,10 @@ export const PAUSE_SONG = 'PAUSE_SONG';
 export const END_SONG = 'END_SONG';
 
 export const loadSong = (song, audio) => {
-  // load the song into web audio
+
+  audio.src = song;
+  audio.play();
+
   return {
     type: LOAD_SONG,
     song
@@ -12,14 +15,22 @@ export const loadSong = (song, audio) => {
 }
 
 export const playSong = (audio) => {
-  // play the song with web audio
+  
+  if (!audio.playing) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+
   return {
     type: PLAY_SONG
   }
 }
 
 export const pauseSong = (audio) => {
-  // pause the audio
+  
+  audio.pause();
+
   return {
     type: PAUSE_SONG
   }

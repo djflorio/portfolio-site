@@ -1,6 +1,7 @@
 import * as actions from './PlayerActions';
 
 export const defaultState = {
+  player: new Audio(),
   currentSong: {},
   playing: false
 }
