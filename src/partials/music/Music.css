@@ -145,7 +145,8 @@
   cursor: pointer;
 }
 
-.music__track:hover {
+.music__track:hover,
+.music__track--playing {
   box-shadow: 0 0 4px white;
   background-color: white;
 }

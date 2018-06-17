@@ -70,7 +70,10 @@ const Music = (props) => {
                 props.currentAlbum.tracks.map(track => (
                   <li
                     key={track.id}
-                    className="music__track"
+                    className={classnames(
+                      "music__track",
+                      {"music__track--playing": props.currentSong == track}
+                    )}
                     onClick={()=>props.onSongClick(track, props.player)}>
                     <FontAwesomeIcon
                       className="music__icon"

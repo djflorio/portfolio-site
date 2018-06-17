@@ -5,6 +5,14 @@ import Player from './Player';
 import { loadSong, playSong } from './PlayerActions';
 
 class PlayerContainer extends React.Component {
+
+  componentDidMount() {
+    console.log("mount");
+    this.props.player.addEventListener('timeupdate', () => {
+      //console.log(this.props.player.currentTime / this.props.player.duration);
+    })
+  }
+
   render() {
     return (
       this.props.visible &&
