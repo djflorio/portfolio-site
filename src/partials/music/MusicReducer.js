@@ -3,7 +3,7 @@ import * as actions from './MusicActions';
 export const defaultState = {
   fetching: false,
   data: [],
-  currentAlbum: {}
+  currentAlbum: null
 }
 
 const music = (state=defaultState, action) => {

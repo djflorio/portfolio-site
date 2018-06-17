@@ -2,7 +2,15 @@ import React from 'react';
 import classnames from 'classnames';
 import './Music.css';
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faPlay from '@fortawesome/fontawesome-free-solid/faPlay';
+import faPause from '@fortawesome/fontawesome-free-solid/faPause';
+import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
+import faForward from '@fortawesome/fontawesome-free-solid/faForward';
+import faBackward from '@fortawesome/fontawesome-free-solid/faBackward';
+
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 
 const Music = (props) => {
@@ -17,7 +25,7 @@ const Music = (props) => {
                   key={album.id}
                   className={classnames(
                     "album",
-                    {"album--open": props.currentAlbum.id === album.id}
+                    {"album--open": props.currentAlbum === album}
                   )}
                   onClick={()=>props.onAlbumClick(album)}
                 >
@@ -36,6 +44,40 @@ const Music = (props) => {
             }
           </ul>
         </Zoom>
+        {
+          props.currentAlbum !== null &&
+          <div className="music__info">
+            <div className="music__header">
+              <h1 className="music__title">{props.currentAlbum.title}</h1>
+              <h2 className="music__year">{props.currentAlbum.year}</h2>
+            </div>
+            <div className="music__links">
+              {
+                props.currentAlbum.links.map(link => (
+                  <a
+                    key={link.id}
+                    className="music__link"
+                    href={link.url}
+                    target="_blank">
+                    {link.name}
+                  </a>
+                ))
+              }
+            </div>
+            <Fade cascade>
+            <ul className="music__tracks">
+              {
+                props.currentAlbum.tracks.map(track => (
+                  <li key={track.id} className="music__track">
+                    <FontAwesomeIcon className="music__icon" icon={faPlay} />
+                    {track.title}
+                  </li>
+                ))
+              }
+            </ul>
+            </Fade>
+          </div>
+        }
       </div>
     </section>
   );
