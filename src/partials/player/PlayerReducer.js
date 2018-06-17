@@ -12,19 +12,14 @@ const player = (state=defaultState, action) => {
     case actions.LOAD_SONG: {
       return {
         ...state,
-        currentSong: action.song
+        currentSong: action.song,
+        playing: !state.player.paused
       }
     }
-    case actions.PLAY_SONG: {
+    case actions.PLAY_PAUSE: {
       return {
         ...state,
-        playing: true
-      }
-    }
-    case actions.PAUSE_SONG: {
-      return {
-        ...state,
-        playing: false
+        playing: !state.player.paused
       }
     }
     case actions.TOGGLE_PLAYER: {

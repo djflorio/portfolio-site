@@ -72,7 +72,10 @@ const Music = (props) => {
                     key={track.id}
                     className="music__track"
                     onClick={()=>props.onSongClick(track, props.player)}>
-                    <FontAwesomeIcon className="music__icon" icon={faPlay} />
+                    <FontAwesomeIcon
+                      className="music__icon"
+                      icon={props.playing && props.currentSong == track ? faPause : faPlay}
+                    />
                     {track.title}
                   </li>
                 ))

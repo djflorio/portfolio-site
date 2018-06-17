@@ -1,6 +1,5 @@
 export const LOAD_SONG = 'LOAD_SONG';
-export const PLAY_SONG = 'PLAY_SONG';
-export const PAUSE_SONG = 'PAUSE_SONG';
+export const PLAY_PAUSE = 'PLAY_PAUSE';
 export const TOGGLE_PLAYER = 'TOGGLE_PLAYER';
 
 export const loadSong = (song, audio) => {
@@ -14,25 +13,15 @@ export const loadSong = (song, audio) => {
   }
 }
 
-export const playSong = (audio) => {
-  
-  if (!audio.playing) {
+export const playPause = (audio) => {
+  if (audio.paused) {
     audio.play();
   } else {
     audio.pause();
   }
 
   return {
-    type: PLAY_SONG
-  }
-}
-
-export const pauseSong = (audio) => {
-  
-  audio.pause();
-
-  return {
-    type: PAUSE_SONG
+    type: PLAY_PAUSE
   }
 }
 
