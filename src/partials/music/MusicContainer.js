@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { doFetch, setAlbum } from './MusicActions';
+import { loadSong } from '../player/PlayerActions';
 
 import Music from './Music';
 
@@ -17,6 +18,8 @@ class MusicContainer extends React.Component {
         albums={this.props.albums}
         currentAlbum={this.props.currentAlbum}
         onAlbumClick={this.props.onAlbumClick}
+        onSongClick={this.props.onSongClick}
+        player={this.props.player}
       />
     );
   }
@@ -25,7 +28,8 @@ class MusicContainer extends React.Component {
 function mapStateToProps(state) {
   return {
     albums: state.music.data,
-    currentAlbum: state.music.currentAlbum
+    currentAlbum: state.music.currentAlbum,
+    player: state.player.player
   }
 }
 
@@ -36,6 +40,9 @@ function mapDispatchToProps(dispatch) {
     },
     onAlbumClick: (album) => {
       dispatch(setAlbum(album));
+    },
+    onSongClick: (song, player) => {
+      dispatch(loadSong(song, player));
     }
   }
 }

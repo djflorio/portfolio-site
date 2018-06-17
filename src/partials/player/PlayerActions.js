@@ -5,7 +5,7 @@ export const TOGGLE_PLAYER = 'TOGGLE_PLAYER';
 
 export const loadSong = (song, audio) => {
 
-  audio.src = song;
+  audio.src = song.file;
   audio.play();
 
   return {
