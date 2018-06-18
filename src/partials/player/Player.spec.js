@@ -30,7 +30,7 @@ describe('Player', () => {
   });
 
   it('should create action to close player', () => {
-    expect(actions.closePlayer()).toEqual({
+    expect(actions.closePlayer(testAudio)).toEqual({
       type: actions.CLOSE_PLAYER
     });
   });
@@ -46,12 +46,14 @@ describe('Player', () => {
 
     const openState = {
       ...defaultState,
-      visible: true
+      visible: true,
+      playing: true
     }
 
-    expect(reducer(openState, actions.closePlayer())).toEqual({
+    expect(reducer(openState, actions.closePlayer(testAudio))).toEqual({
       ...openState,
-      visible: false
+      visible: false,
+      playing: false
     });
 
   });

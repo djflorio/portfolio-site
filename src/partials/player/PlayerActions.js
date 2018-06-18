@@ -30,6 +30,11 @@ export const openPlayer = () => ({
   type: OPEN_PLAYER
 });
 
-export const closePlayer = () => ({
-  type: CLOSE_PLAYER
-});
+export const closePlayer = (audio) => {
+  
+  audio.pause();
+  
+  return {
+    type: CLOSE_PLAYER
+  }
+};

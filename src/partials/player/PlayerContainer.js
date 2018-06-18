@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Player from './Player';
 
-import { loadSong, playSong } from './PlayerActions';
+import { loadSong, playPause, closePlayer } from './PlayerActions';
 
 class PlayerContainer extends React.Component {
 
@@ -32,6 +32,8 @@ class PlayerContainer extends React.Component {
         playing={this.props.playing}
         player={this.props.player}
         progress={this.state.progress}
+        onPlayPauseClick={this.props.onPlayPauseClick}
+        onPlayerCloseClick={this.props.onPlayerCloseClick}
       />
     );
   }
@@ -50,6 +52,12 @@ function mapDispatchToProps(dispatch) {
   return {
     onLoad: (song, player) => {
       dispatch(loadSong(song, player));
+    },
+    onPlayPauseClick: (player) => {
+      dispatch(playPause(player));
+    },
+    onPlayerCloseClick: (player) => {
+      dispatch(closePlayer(player));
     }
   }
 }

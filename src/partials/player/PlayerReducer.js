@@ -31,7 +31,8 @@ const player = (state=defaultState, action) => {
     case actions.CLOSE_PLAYER: {
       return {
         ...state,
-        visible: false
+        visible: false,
+        playing: !state.player.paused
       }
     }
     default: return state;

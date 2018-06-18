@@ -15,6 +15,12 @@
   top: 10px;
   left: 10px;
   font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player__playpause:hover {
+  color: rgb(255, 255, 255);
 }
 
 .player__trackbar {
@@ -23,7 +29,7 @@
   left: 40px;
   right: 35px;
   bottom: 10px;
-  background-color: red;
+  background-color: #222222;
 }
 
 .player__title {
@@ -40,6 +46,12 @@
   top: 10px;
   right: 10px;
   font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player__close:hover {
+  color: white;
 }
 
 .player__progress {
@@ -47,8 +59,8 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: green;
+  background-color: rgb(235, 204, 119);
   overflow: hidden;
   white-space: nowrap;
-  color: blue;
+  color: #222;
 }
