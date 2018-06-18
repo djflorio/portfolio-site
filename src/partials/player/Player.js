@@ -14,7 +14,7 @@ const Player = (props) => {
       <FontAwesomeIcon
         className="player__playpause"
         icon={props.playing ? faPause : faPlay}
-        onClick={()=>props.onPlayPauseClick(props.player)}
+        onClick={props.playing ? props.pauseAudio : props.playAudio}
       />
       <div className="player__trackbar">
         <span
@@ -33,7 +33,7 @@ const Player = (props) => {
       <FontAwesomeIcon
         className="player__close"
         icon={faTimes}
-        onClick={()=>props.onPlayerCloseClick(props.player)}
+        onClick={()=>props.onPlayerCloseClick}
       />
     </div>
   );

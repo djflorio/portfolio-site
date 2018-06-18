@@ -72,7 +72,7 @@ const Music = (props) => {
                       "music__track",
                       {"music__track--playing": props.currentSong === track}
                     )}
-                    onClick={()=>props.onSongClick(track, props.player)}>
+                    onClick={()=>props.onSongClick(track)}>
                     <FontAwesomeIcon
                       className="music__icon"
                       icon={props.playing && props.currentSong === track ? faPause : faPlay}

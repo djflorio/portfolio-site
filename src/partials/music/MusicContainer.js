@@ -2,14 +2,34 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { doFetch, setAlbum } from './MusicActions';
-import { loadSong, playPause, openPlayer } from '../player/PlayerActions';
+import { loadSong, playAudio, pauseAudio, updatePercentage, endSong } from '../player/PlayerActions';
 
 import Music from './Music';
 
 class MusicContainer extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    this.playPauseLoad = this.playPauseLoad.bind(this);
+  }
+
   componentDidMount() {
-    this.props.onLoad();
+    this.props.onPageLoad();
+  }
+
+  playPauseLoad(song) {
+    const {
+      playing, currentSong, player, onUpdate, onEnd
+    } = this.props;
+    if (playing && currentSong.file === song.file) {
+      this.props.onPause(player);
+    }
+    else if (!playing && currentSong.https === song.https) {
+      this.props.onPlay(player);
+    } else {
+      this.props.onLoad(song, player, onUpdate, onEnd);
+    } 
   }
 
   render() {
@@ -18,7 +38,7 @@ class MusicContainer extends React.Component {
         albums={this.props.albums}
         currentAlbum={this.props.currentAlbum}
         onAlbumClick={this.props.onAlbumClick}
-        onSongClick={this.props.onSongClick}
+        onSongClick={this.playPauseLoad}
         player={this.props.player}
         playing={this.props.playing}
         currentSong={this.props.currentSong}
@@ -39,19 +59,26 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onLoad: () => {
+    onPageLoad: () => {
       dispatch(doFetch());
     },
     onAlbumClick: (album) => {
       dispatch(setAlbum(album));
     },
-    onSongClick: (song, player) => {
-      if (player.src === song.file) {
-        dispatch(playPause(player));
-      } else {
-        dispatch(loadSong(song, player));
-      }
-      dispatch(openPlayer());
+    onPlay: (player) => {
+      dispatch(playAudio(player));
+    },
+    onPause: (player) => {
+      dispatch(pauseAudio(player));
+    },
+    onLoad: (song, player, onUpdate, onEnd) => {
+      dispatch(loadSong(song, player, onUpdate, onEnd));
+    },
+    onUpdate: (percentage) => {
+      dispatch(updatePercentage(percentage));
+    },
+    onEnd: () => {
+      dispatch(endSong());
     }
   }
 }

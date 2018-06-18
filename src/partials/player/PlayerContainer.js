@@ -2,31 +2,34 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Player from './Player';
 
-import { loadSong, playPause, closePlayer } from './PlayerActions';
+import { playAudio, pauseAudio, closePlayer } from './PlayerActions';
 
 class PlayerContainer extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-      progress: 0
+    this.onScrub = this.onScrub.bind(this);
+  }
+
+  onScrub(e) {
+    const timeline = document.querySelector('.player__progress');
+    let left = timeline.getBoundingClientRect().left;
+    let width = timeline.getBoundingClientRect().width;
+    let clickPos = e.clientX - left;
+    let percentage = clickPos / width;
+
+    this.updateTime(this.props.player.duration * percentage);
+  }
+
+  updateTime(time) {
+    // If the timeline is clicked before the song is loaded,
+    // time will be NaN, which will cause an error. We first
+    // check if time is finite to prevent this. As a side note,
+    // time really is finite, so stop waiting.
+    if (isFinite(time)) {
+      this.props.player.currentTime = time;
     }
-
-    this.updateProgress = this.updateProgress.bind(this);
-  }
-
-  componentDidMount() {
-    requestAnimationFrame(this.updateProgress);
-  }
-
-  updateProgress() {
-    const currentTime = this.props.player.currentTime;
-    const duration = this.props.player.duration;
-    this.setState({
-      progress: (currentTime/duration) * 100
-    });
-    requestAnimationFrame(this.updateProgress);
   }
 
   render() {
@@ -35,10 +38,11 @@ class PlayerContainer extends React.Component {
       <Player
         currentSong={this.props.currentSong}
         playing={this.props.playing}
-        player={this.props.player}
-        progress={this.state.progress}
-        onPlayPauseClick={this.props.onPlayPauseClick}
-        onPlayerCloseClick={this.props.onPlayerCloseClick}
+        progress={this.props.progress}
+        playAudio={() => this.props.playAudio(this.props.player)}
+        pauseAudio={() => this.props.pauseAudio(this.props.player)}
+        onPlayerCloseClick={this.props.closePlayer(this.props.player)}
+        onScrub={this.onScrub}
       />
     );
   }
@@ -48,20 +52,21 @@ function mapStateToProps(state) {
   return {
     currentSong: state.player.currentSong,
     player: state.player.player,
-    visible: state.player.visible,
-    playing: state.player.playing
+    visible: state.player.playerOpen,
+    playing: state.player.playing,
+    progress: state.player.playPercent
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    onLoad: (song, player) => {
-      dispatch(loadSong(song, player));
+    playAudio: (player) => {
+      dispatch(playAudio(player));
     },
-    onPlayPauseClick: (player) => {
-      dispatch(playPause(player));
+    pauseAudio: (player) => {
+      dispatch(pauseAudio(player));
     },
-    onPlayerCloseClick: (player) => {
+    closePlayer: (player) => {
       dispatch(closePlayer(player));
     }
   }

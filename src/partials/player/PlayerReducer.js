@@ -2,37 +2,50 @@ import * as actions from './PlayerActions';
 
 export const defaultState = {
   player: new Audio(),
-  currentSong: {},
   playing: false,
-  visible: false
+  playPercent: 0,
+  currentTime: 0,
+  playerLoaded: false,
+  playerOpen: false,
+  currentSong: {}
 }
 
 const player = (state=defaultState, action) => {
   switch(action.type) {
+    case actions.PLAY_AUDIO: {
+      return {
+        ...state,
+        playing: true
+      }
+    }
+    case actions.PAUSE_AUDIO: {
+      return {
+        ...state,
+        playing: false
+      }
+    }
     case actions.LOAD_SONG: {
       return {
         ...state,
-        currentSong: action.song,
-        playing: !state.player.paused
-      }
-    }
-    case actions.PLAY_PAUSE: {
-      return {
-        ...state,
-        playing: !state.player.paused
-      }
-    }
-    case actions.OPEN_PLAYER: {
-      return {
-        ...state,
-        visible: true
+        playerOpen: true,
+        playerLoaded: true,
+        playing: true,
+        currentSong: action.song
       }
     }
     case actions.CLOSE_PLAYER: {
+      return defaultState;
+    }
+    case actions.UPDATE_PERCENTAGE: {
       return {
         ...state,
-        visible: false,
-        playing: !state.player.paused
+        playPercent: action.percentage
+      }
+    }
+    case actions.END_SONG: {
+      return {
+        ...state,
+        playing: false
       }
     }
     default: return state;
