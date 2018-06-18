@@ -12,16 +12,21 @@ class PlayerContainer extends React.Component {
     this.state = {
       progress: 0
     }
+
+    this.updateProgress = this.updateProgress.bind(this);
   }
 
   componentDidMount() {
-    this.props.player.addEventListener('timeupdate', () => {
-      const currentTime = this.props.player.currentTime;
-      const duration = this.props.player.duration;
-      this.setState({
-        progress: (currentTime/duration) * 100
-      });
-    })
+    requestAnimationFrame(this.updateProgress);
+  }
+
+  updateProgress() {
+    const currentTime = this.props.player.currentTime;
+    const duration = this.props.player.duration;
+    this.setState({
+      progress: (currentTime/duration) * 100
+    });
+    requestAnimationFrame(this.updateProgress);
   }
 
   render() {
