@@ -1,6 +1,7 @@
 export const LOAD_SONG = 'LOAD_SONG';
 export const PLAY_PAUSE = 'PLAY_PAUSE';
-export const TOGGLE_PLAYER = 'TOGGLE_PLAYER';
+export const OPEN_PLAYER = 'OPEN_PLAYER';
+export const CLOSE_PLAYER = 'CLOSE_PLAYER';
 
 export const loadSong = (song, audio) => {
 
@@ -25,6 +26,10 @@ export const playPause = (audio) => {
   }
 }
 
-export const togglePlayer = () => ({
-  type: TOGGLE_PLAYER
+export const openPlayer = () => ({
+  type: OPEN_PLAYER
+});
+
+export const closePlayer = () => ({
+  type: CLOSE_PLAYER
 });

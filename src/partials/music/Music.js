@@ -6,8 +6,6 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faPlay from '@fortawesome/fontawesome-free-solid/faPlay';
 import faPause from '@fortawesome/fontawesome-free-solid/faPause';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
-import faForward from '@fortawesome/fontawesome-free-solid/faForward';
-import faBackward from '@fortawesome/fontawesome-free-solid/faBackward';
 
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
@@ -72,12 +70,12 @@ const Music = (props) => {
                     key={track.id}
                     className={classnames(
                       "music__track",
-                      {"music__track--playing": props.currentSong == track}
+                      {"music__track--playing": props.currentSong === track}
                     )}
                     onClick={()=>props.onSongClick(track, props.player)}>
                     <FontAwesomeIcon
                       className="music__icon"
-                      icon={props.playing && props.currentSong == track ? faPause : faPlay}
+                      icon={props.playing && props.currentSong === track ? faPause : faPlay}
                     />
                     {track.title}
                   </li>

@@ -23,27 +23,33 @@ describe('Player', () => {
     });
   });
 
-  it('should create action to toggle player', () => {
-    expect(actions.togglePlayer()).toEqual({
-      type: actions.TOGGLE_PLAYER
+  it('should create action to open player', () => {
+    expect(actions.openPlayer()).toEqual({
+      type: actions.OPEN_PLAYER
     });
   });
 
-  it('should open player when closed with togglePlayer', () => {
-    expect(reducer(undefined, actions.togglePlayer())).toEqual({
+  it('should create action to close player', () => {
+    expect(actions.closePlayer()).toEqual({
+      type: actions.CLOSE_PLAYER
+    });
+  });
+
+  it('should open player with openPlayer', () => {
+    expect(reducer(undefined, actions.openPlayer())).toEqual({
       ...defaultState,
       visible: true
     });
   });
 
-  it('should close player when open with togglePlayer', () => {
+  it('should close player with closePlayer', () => {
 
     const openState = {
       ...defaultState,
       visible: true
     }
 
-    expect(reducer(openState, actions.togglePlayer())).toEqual({
+    expect(reducer(openState, actions.closePlayer())).toEqual({
       ...openState,
       visible: false
     });

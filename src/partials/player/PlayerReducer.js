@@ -22,10 +22,16 @@ const player = (state=defaultState, action) => {
         playing: !state.player.paused
       }
     }
-    case actions.TOGGLE_PLAYER: {
+    case actions.OPEN_PLAYER: {
       return {
         ...state,
-        visible: !state.visible
+        visible: true
+      }
+    }
+    case actions.CLOSE_PLAYER: {
+      return {
+        ...state,
+        visible: false
       }
     }
     default: return state;

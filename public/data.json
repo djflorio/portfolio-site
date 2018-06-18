@@ -9,22 +9,26 @@
       {
         "id": "t1",
         "title": "Coming My Way",
-        "file": "http://danflorio.com/uploads/audio/comingmyway.mp3"
+        "file": "http://danflorio.com/uploads/audio/comingmyway.mp3",
+        "album": "A Day Wiser"
       },
       {
         "id": "t2",
         "title": "Dream of Mine",
-        "file": "http://danflorio.com/uploads/audio/dreamofmine.mp3"
+        "file": "http://danflorio.com/uploads/audio/dreamofmine.mp3",
+        "album": "A Day Wiser"
       },
       {
         "id": "t3",
         "title": "Young Traveler",
-        "file": "http://danflorio.com/uploads/audio/youngtraveler.mp3"
+        "file": "http://danflorio.com/uploads/audio/youngtraveler.mp3",
+        "album": "A Day Wiser"
       },
       {
         "id": "t4",
         "title": "White Tailed Hare",
-        "file": "http://danflorio.com/uploads/audio/whitetailedhare.mp3"
+        "file": "http://danflorio.com/uploads/audio/whitetailedhare.mp3",
+        "album": "A Day Wiser"
       }
     ],
     "links": [
@@ -55,42 +59,50 @@
       {
         "id": "t5",
         "title": "Fleeting Embers",
-        "file": "http://danflorio.com/uploads/audio/fleetingembers.mp3"
+        "file": "http://danflorio.com/uploads/audio/fleetingembers.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t6",
         "title": "Goldbricker",
-        "file": "http://danflorio.com/uploads/audio/goldbricker.mp3"
+        "file": "http://danflorio.com/uploads/audio/goldbricker.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t7",
         "title": "Howls of Hounds",
-        "file": "http://danflorio.com/uploads/audio/howlsofhounds.mp3"
+        "file": "http://danflorio.com/uploads/audio/howlsofhounds.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t8",
         "title": "Rations Running Low",
-        "file": "http://danflorio.com/uploads/audio/rationsrunninglow.mp3"
+        "file": "http://danflorio.com/uploads/audio/rationsrunninglow.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t9",
         "title": "Dither",
-        "file": "http://danflorio.com/uploads/audio/dither.mp3"
+        "file": "http://danflorio.com/uploads/audio/dither.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t10",
         "title": "Jaunted",
-        "file": "http://danflorio.com/uploads/audio/jaunted.mp3"
+        "file": "http://danflorio.com/uploads/audio/jaunted.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t11",
         "title": "Empty Lane",
-        "file": "http://danflorio.com/uploads/audio/emptylane.mp3"
+        "file": "http://danflorio.com/uploads/audio/emptylane.mp3",
+        "album": "Malleability"
       },
       {
         "id": "t12",
         "title": "Balance and Precision",
-        "file": "http://danflorio.com/uploads/audio/balanceandprecision.mp3"
+        "file": "http://danflorio.com/uploads/audio/balanceandprecision.mp3",
+        "album": "Malleability"
       }
     ],
     "links": [
@@ -121,37 +133,44 @@
       {
         "id": "t13",
         "title": "Clear as Day",
-        "file": "http://danflorio.com/uploads/audio/clearasday.mp3"
+        "file": "http://danflorio.com/uploads/audio/clearasday.mp3",
+        "album": "Big Thoughts in a Small Place"
       },
       {
         "id": "t14",
         "title": "Passerby",
-        "file": "http://danflorio.com/uploads/audio/passerby.mp3"
+        "file": "http://danflorio.com/uploads/audio/passerby.mp3",
+        "album": "Big Thoughts in a Small Place"
       },
       {
         "id": "t15",
         "title": "Jessamine & Park",
-        "file": "http://danflorio.com/uploads/audio/jessamineandpark.mp3"
+        "file": "http://danflorio.com/uploads/audio/jessamineandpark.mp3",
+        "album": "Big Thoughts in a Small Place"
       },
       {
         "id": "t16",
         "title": "Brush it Off to the Wind",
-        "file": "http://danflorio.com/uploads/audio/brushitofftothewind.mp3"
+        "file": "http://danflorio.com/uploads/audio/brushitofftothewind.mp3",
+        "album": "Big Thoughts in a Small Place"
       },
       {
         "id": "t17",
         "title": "So Sophisticated",
-        "file": "http://danflorio.com/uploads/audio/sosophisticated.mp3"
+        "file": "http://danflorio.com/uploads/audio/sosophisticated.mp3",
+        "album": "Big Thoughts in a Small Place"
       },
       {
         "id": "t18",
         "title": "Letter and a Brick",
-        "file": "http://danflorio.com/uploads/audio/letterandabrick.mp3"
+        "file": "http://danflorio.com/uploads/audio/letterandabrick.mp3",
+        "album": "Big Thoughts in a Small Place"
       },
       {
         "id": "t19",
         "title": "Abysmal Attitude",
-        "file": "http://danflorio.com/uploads/audio/abysmalattitude.mp3"
+        "file": "http://danflorio.com/uploads/audio/abysmalattitude.mp3",
+        "album": "Big Thoughts in a Small Place"
       }
     ],
     "links": [

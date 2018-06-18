@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { doFetch, setAlbum } from './MusicActions';
-import { loadSong, playPause } from '../player/PlayerActions';
+import { loadSong, playPause, openPlayer } from '../player/PlayerActions';
 
 import Music from './Music';
 
@@ -51,6 +51,7 @@ function mapDispatchToProps(dispatch) {
       } else {
         dispatch(loadSong(song, player));
       }
+      dispatch(openPlayer());
     }
   }
 }

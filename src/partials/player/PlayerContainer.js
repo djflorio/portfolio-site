@@ -6,26 +6,43 @@ import { loadSong, playSong } from './PlayerActions';
 
 class PlayerContainer extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      progress: 0
+    }
+  }
+
   componentDidMount() {
-    console.log("mount");
     this.props.player.addEventListener('timeupdate', () => {
-      //console.log(this.props.player.currentTime / this.props.player.duration);
+      const currentTime = this.props.player.currentTime;
+      const duration = this.props.player.duration;
+      this.setState({
+        progress: (currentTime/duration) * 100
+      });
     })
   }
 
   render() {
     return (
       this.props.visible &&
-      <Player currentAlbum={this.props.currentAlbum} />
+      <Player
+        currentSong={this.props.currentSong}
+        playing={this.props.playing}
+        player={this.props.player}
+        progress={this.state.progress}
+      />
     );
   }
 }
 
 function mapStateToProps(state) {
   return {
-    currentAlbum: state.music.currentAlbum,
+    currentSong: state.player.currentSong,
     player: state.player.player,
-    visible: state.player.visible
+    visible: state.player.visible,
+    playing: state.player.playing
   }
 }
 
