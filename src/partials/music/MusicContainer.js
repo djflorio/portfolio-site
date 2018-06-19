@@ -22,12 +22,16 @@ class MusicContainer extends React.Component {
     const {
       playing, currentSong, player, onUpdate, onEnd
     } = this.props;
+    console.log(currentSong);
     if (playing && currentSong.file === song.file) {
+      console.log("lemons");
       this.props.onPause(player);
     }
-    else if (!playing && currentSong.https === song.https) {
+    else if (!playing && currentSong.file === song.file) {
+      console.log("limes");
       this.props.onPlay(player);
     } else {
+      console.log("pears");
       this.props.onLoad(song, player, onUpdate, onEnd);
     } 
   }

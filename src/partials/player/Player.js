@@ -16,7 +16,9 @@ const Player = (props) => {
         icon={props.playing ? faPause : faPlay}
         onClick={props.playing ? props.pauseAudio : props.playAudio}
       />
-      <div className="player__trackbar">
+      <div
+        className="player__trackbar"
+        onClick={props.onScrub}>
         <span
           className="player__progress"
           style={{ width: props.progress + '%' }}>

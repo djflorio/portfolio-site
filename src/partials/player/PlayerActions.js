@@ -34,8 +34,9 @@ export const pauseAudio = (player) => {
 };
 
 export const loadSong = (song, player, onUpdate, onEnd) => {
+  
   player.pause();
-  player.src = song.https;
+  player.src = song.file;
   player.addEventListener("timeupdate", () => {
     const p = 100 * (player.currentTime / player.duration);
     onUpdate(p);

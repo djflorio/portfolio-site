@@ -13,7 +13,7 @@ class PlayerContainer extends React.Component {
   }
 
   onScrub(e) {
-    const timeline = document.querySelector('.player__progress');
+    const timeline = document.querySelector('.player__trackbar');
     let left = timeline.getBoundingClientRect().left;
     let width = timeline.getBoundingClientRect().width;
     let clickPos = e.clientX - left;
@@ -41,7 +41,7 @@ class PlayerContainer extends React.Component {
         progress={this.props.progress}
         playAudio={() => this.props.playAudio(this.props.player)}
         pauseAudio={() => this.props.pauseAudio(this.props.player)}
-        onPlayerCloseClick={this.props.closePlayer(this.props.player)}
+        onPlayerCloseClick={() => this.props.closePlayer(this.props.player)}
         onScrub={this.onScrub}
       />
     );
