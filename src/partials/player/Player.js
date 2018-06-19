@@ -35,7 +35,7 @@ const Player = (props) => {
       <FontAwesomeIcon
         className="player__close"
         icon={faTimes}
-        onClick={()=>props.onPlayerCloseClick}
+        onClick={props.onPlayerCloseClick}
       />
     </div>
   );
