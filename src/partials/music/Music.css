@@ -57,7 +57,7 @@
   animation-name: spin;
 }
 
-.album--open .album__record {
+.album--playing .album__record {
   animation-duration: 0.75s;
 }
 

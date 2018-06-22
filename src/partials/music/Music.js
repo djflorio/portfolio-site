@@ -23,7 +23,8 @@ const Music = (props) => {
                   key={album.id}
                   className={classnames(
                     "album",
-                    {"album--open": props.currentAlbum === album}
+                    {"album--open": props.currentAlbum === album},
+                    {"album--playing": props.currentAlbum === album && props.playing}
                   )}
                   onClick={()=>props.onAlbumClick(album)}
                 >
