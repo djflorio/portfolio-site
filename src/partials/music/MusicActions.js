@@ -1,34 +1,34 @@
 import axios from 'axios';
 
-export const FETCH_STARTED = 'FETCH_STARTED';
-export const FETCH_SUCCEEDED = 'FETCH_SUCCEEDED';
-export const FETCH_FAILED = 'FETCH_FAILED';
+export const MUSIC_FETCH_STARTED = 'FETCH_STARTED';
+export const MUSIC_FETCH_SUCCEEDED = 'FETCH_SUCCEEDED';
+export const MUSIC_FETCH_FAILED = 'FETCH_FAILED';
 export const SET_ALBUM = 'SET_ALBUM';
 
-export const startFetch = () => ({
-  type: FETCH_STARTED
+export const startMusicFetch = () => ({
+  type: MUSIC_FETCH_STARTED
 });
 
-export const endFetch = (data) => ({
-  type: FETCH_SUCCEEDED,
+export const endMusicFetch = (data) => ({
+  type: MUSIC_FETCH_SUCCEEDED,
   payload: data
 });
 
-export const failFetch = () => ({
-  type: FETCH_FAILED
+export const failMusicFetch = () => ({
+  type: MUSIC_FETCH_FAILED
 });
 
 export const doFetch = () => {
   return (dispatch) => {
-    dispatch(startFetch());
+    dispatch(startMusicFetch());
 
     axios({
       method: 'get',
       url: './data.json'
     }).then((res) => {
-      dispatch(endFetch(res.data));
+      dispatch(endMusicFetch(res.data));
     }).catch((err) => {
-      dispatch(failFetch());
+      dispatch(failMusicFetch());
     });
   }
 }

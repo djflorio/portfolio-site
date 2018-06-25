@@ -8,20 +8,20 @@ export const defaultState = {
 
 const music = (state=defaultState, action) => {
   switch(action.type) {
-    case actions.FETCH_STARTED: {
+    case actions.MUSIC_FETCH_STARTED: {
       return {
         ...state,
         fetching: true
       }
     }
-    case actions.FETCH_SUCCEEDED: {
+    case actions.MUSIC_FETCH_SUCCEEDED: {
       return {
         ...state,
         fetching: false,
         data: action.payload
       }
     }
-    case actions.FETCH_FAILED: {
+    case actions.MUSIC_FETCH_FAILED: {
       return {
         ...state,
         fetching: false

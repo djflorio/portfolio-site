@@ -9,21 +9,21 @@ describe('Music', () => {
   }
 
   it('should create action to start fetching music', () => {
-    expect(actions.startFetch()).toEqual({
-      type: actions.FETCH_STARTED
+    expect(actions.startMusicFetch()).toEqual({
+      type: actions.MUSIC_FETCH_STARTED
     });
   });
 
   it('should create action for successful retrieval', () => {
-    expect(actions.endFetch("data")).toEqual({
-      type: actions.FETCH_SUCCEEDED,
+    expect(actions.endMusicFetch("data")).toEqual({
+      type: actions.MUSIC_FETCH_SUCCEEDED,
       payload: "data"
     });
   });
 
   it('should create action for failed retrieval', () => {
-    expect(actions.failFetch()).toEqual({
-      type: actions.FETCH_FAILED
+    expect(actions.failMusicFetch()).toEqual({
+      type: actions.MUSIC_FETCH_FAILED
     });
   });
 
@@ -35,14 +35,14 @@ describe('Music', () => {
   });
 
   it('should start fetch with startFetch', () => {
-    expect(reducer(undefined, actions.startFetch())).toEqual({
+    expect(reducer(undefined, actions.startMusicFetch())).toEqual({
       ...defaultState,
       fetching: true
     });
   });
 
   it('should end fetch with endFetch', () => {
-    expect(reducer(testState, actions.endFetch("data"))).toEqual({
+    expect(reducer(testState, actions.endMusicFetch("data"))).toEqual({
       ...testState,
       fetching: false,
       data: "data"
@@ -50,7 +50,7 @@ describe('Music', () => {
   });
 
   it('should end fetch with failFetch', () => {
-    expect(reducer(testState, actions.failFetch())).toEqual({
+    expect(reducer(testState, actions.failMusicFetch())).toEqual({
       ...testState,
       fetching: false
     });

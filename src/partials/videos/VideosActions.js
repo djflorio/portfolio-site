@@ -4,16 +4,16 @@ export const VIDEOS_FETCH_STARTED = 'VIDEOS_FETCH_STARTED';
 export const VIDEOS_FETCH_SUCCEEDED = 'VIDEOS_FETCH_SUCCEEDED';
 export const VIDEOS_FETCH_FAILED = 'VIDEOS_FETCH_FAILED';
 
-export const startFetch = () => ({
+export const startVideosFetch = () => ({
   type: VIDEOS_FETCH_STARTED
 });
 
-export const endFetch = (data) => ({
+export const endVideosFetch = (data) => ({
   type: VIDEOS_FETCH_SUCCEEDED,
   payload: data
 });
 
-export const failFetch = () => ({
+export const failVideosFetch = () => ({
   type: VIDEOS_FETCH_FAILED
 });
 
@@ -25,16 +25,16 @@ export const doFetch = () => {
   url += "&key=AIzaSyCe7ojEXqyPtbYSLkWh1tqniQKuIXneEWU";
 
   return (dispatch) => {
-    dispatch(startFetch());
+    dispatch(startVideosFetch());
 
     axios({
       method: 'get',
       url: url
     }).then((res) => {
-      dispatch(endFetch(res.data));
+      dispatch(endVideosFetch(res.data));
       console.log(res.data);
     }).catch((err) => {
-      dispatch(failFetch());
+      dispatch(failVideosFetch());
       console.log(err);
     });
   }
