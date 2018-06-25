@@ -25,7 +25,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onLoad: () => {
-      dispatch(doFetch());
+      doFetch(dispatch);
     }
   }
 }

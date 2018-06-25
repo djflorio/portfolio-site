@@ -17,25 +17,22 @@ export const failVideosFetch = () => ({
   type: VIDEOS_FETCH_FAILED
 });
 
-export const doFetch = () => {
-
+export const doFetch = (dispatch) => {
   let url = "https://www.googleapis.com/youtube/v3/playlistItems";
   url += "?part=snippet&maxResults=50&playlistId=";
   url += "PLOOU7F1-foikp_GIsgXBeC523y-TTc-cl";
   url += "&key=AIzaSyCe7ojEXqyPtbYSLkWh1tqniQKuIXneEWU";
 
-  return (dispatch) => {
-    dispatch(startVideosFetch());
+  dispatch(startVideosFetch());
 
-    axios({
-      method: 'get',
-      url: url
-    }).then((res) => {
-      dispatch(endVideosFetch(res.data));
-      console.log(res.data);
-    }).catch((err) => {
-      dispatch(failVideosFetch());
-      console.log(err);
-    });
-  }
+  axios({
+    method: 'get',
+    url: url
+  }).then((res) => {
+    dispatch(endVideosFetch(res.data));
+    console.log(res.data);
+  }).catch((err) => {
+    dispatch(failVideosFetch());
+    console.log(err);
+  });
 }

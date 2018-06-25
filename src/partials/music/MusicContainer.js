@@ -60,7 +60,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     onPageLoad: () => {
-      dispatch(doFetch());
+      doFetch(dispatch);
     },
     onAlbumClick: (album) => {
       dispatch(setAlbum(album));

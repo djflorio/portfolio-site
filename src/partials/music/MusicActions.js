@@ -18,19 +18,16 @@ export const failMusicFetch = () => ({
   type: MUSIC_FETCH_FAILED
 });
 
-export const doFetch = () => {
-  return (dispatch) => {
-    dispatch(startMusicFetch());
-
-    axios({
-      method: 'get',
-      url: './data.json'
-    }).then((res) => {
-      dispatch(endMusicFetch(res.data));
-    }).catch((err) => {
-      dispatch(failMusicFetch());
-    });
-  }
+export const doFetch = (dispatch) => {
+  dispatch(startMusicFetch());
+  axios({
+    method: 'get',
+    url: './data.json'
+  }).then((res) => {
+    dispatch(endMusicFetch(res.data));
+  }).catch((err) => {
+    dispatch(failMusicFetch());
+  });
 }
 
 export const setAlbum = (album) => ({
