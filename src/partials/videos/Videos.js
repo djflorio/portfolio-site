@@ -3,7 +3,7 @@ import './Videos.css';
 
 const Videos = (props) => (
   <section className="videos">
-    VIDEOS
+    
   </section>
 );
 
