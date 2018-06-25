@@ -11,14 +11,18 @@ class VideosContainer extends React.Component {
 
   render() {
     return (
-      <Videos />
+      <Videos
+        videos={this.props.videos}
+        fetching={this.props.fetching}
+      />
     );
   }
 }
 
 function mapStateToProps(state) {
   return {
-    fetching: state.videos.fetching
+    fetching: state.videos.fetching,
+    videos: state.videos.data
   }
 }
 

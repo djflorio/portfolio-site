@@ -29,10 +29,10 @@ export const doFetch = (dispatch) => {
     method: 'get',
     url: url
   }).then((res) => {
-    dispatch(endVideosFetch(res.data));
-    console.log(res.data);
+    dispatch(endVideosFetch(res.data.items));
   }).catch((err) => {
     dispatch(failVideosFetch());
+    // TODO: Handle error
     console.log(err);
   });
 }
