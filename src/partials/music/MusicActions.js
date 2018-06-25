@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const MUSIC_FETCH_STARTED = 'FETCH_STARTED';
-export const MUSIC_FETCH_SUCCEEDED = 'FETCH_SUCCEEDED';
-export const MUSIC_FETCH_FAILED = 'FETCH_FAILED';
+export const MUSIC_FETCH_STARTED = 'MUSIC_FETCH_STARTED';
+export const MUSIC_FETCH_SUCCEEDED = 'MUSIC_FETCH_SUCCEEDED';
+export const MUSIC_FETCH_FAILED = 'MUSIC_FETCH_FAILED';
 export const SET_ALBUM = 'SET_ALBUM';
 
 export const startMusicFetch = () => ({
