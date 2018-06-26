@@ -14,7 +14,7 @@
 .main__content {
   position: relative;
   height: 100%;
-  background-image: url('./img/trees.png');
+  background-image: url('./img/trees2.png');
   background-position: top left;
   background-repeat: repeat-x;
   background-size: 1000px;
@@ -44,6 +44,7 @@
   font-size: 70px;
   animation-duration: 1s;
   animation-name: slidedown;
+  color: #111;
 }
 
 .main__text {
@@ -54,6 +55,7 @@
   animation-name: fadein;
   display: inline-block;
   max-width: 600px;
+  color: #111;
 }
 
 .main__scroll {
@@ -62,7 +64,7 @@
   text-align: center;
   padding: 30px 0;
   bottom: 0;
-  
+  color: #111;
 }
 
 .main__scroll-circle {

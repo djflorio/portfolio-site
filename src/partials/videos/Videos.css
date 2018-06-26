@@ -1,11 +1,16 @@
+.videos {
+  padding: 65px;
+  background-color: #65b0db;
+}
+
 .videos__list {
   list-style: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  padding: 10px;
+  max-width: 1000px;
 }
 
 .videos__item {

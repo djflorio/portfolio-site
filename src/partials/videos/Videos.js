@@ -8,7 +8,7 @@ const Videos = (props) => (
     <ul className="videos__list">
     {
       props.videos.map(video => (
-        <Fade key={video.id} bottom>
+        <Fade key={video.id}>
           <li className="videos__item">
             <img
               className="videos__thumb" 

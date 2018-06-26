@@ -1,5 +1,5 @@
 .music {
-  padding: 50px;
+  padding: 65px;
   background-color: #111;
   color: #efefef;
   overflow-x: hidden;
@@ -21,6 +21,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
+  margin: 0;
 }
 
 .album__art {
