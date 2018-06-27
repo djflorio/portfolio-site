@@ -36,6 +36,32 @@
   z-index: 1;
 }
 
+.main__bird {
+  position: absolute;
+  z-index: 2;
+}
+
+.main__bird--1 {
+  width: 35px;
+  top: 300px;
+  left: -35px;
+  animation: fly 3s infinite linear, drift 3s infinite ease-in;
+}
+
+.main__bird--2 {
+  width: 25px;
+  top: 310px;
+  left: -35px;
+  animation: fly 4s infinite linear, drift 2s infinite ease-in;
+}
+
+.main__bird--3 {
+  width: 30px;
+  top: 305px;
+  left: -35px;
+  animation: fly 3.5s infinite linear, drift 2.5s infinite ease-in;
+}
+
 .main__title {
   position: absolute;
   top: 260px;
@@ -69,13 +95,36 @@
 
 .main__scroll-circle {
   animation-iteration-count: infinite;
-
   animation-duration: 1s;
   animation-name: bounce;
 }
 
 .main__scroll-circle {
   font-size: 50px;
+}
+
+@keyframes fly {
+  0% {
+    left: -35px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes slidedown {

@@ -4,6 +4,8 @@ import './Main.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import chevronDown from '@fortawesome/fontawesome-free-solid/faChevronCircleDown';
 
+import bird from './img/bird.png';
+
 class Main extends React.Component {
 
   constructor(props) {
@@ -35,6 +37,9 @@ class Main extends React.Component {
     return (
       <section className="main" style={mainStyle}>
         <span className="main__sun" style={sunStyle}></span>
+        <img className="main__bird main__bird--1" src={bird} />
+        <img className="main__bird main__bird--2" src={bird} />
+        <img className="main__bird main__bird--3" src={bird} />
         <div className="main__content">
           <h1 className="main__title" style={titleStyle}>
             dan florio
