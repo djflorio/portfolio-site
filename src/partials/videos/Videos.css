@@ -31,11 +31,19 @@
 .videos__item {
   position: relative;
   cursor: pointer;
-  border-radius: 3%;
   overflow: hidden;
   box-shadow: 0 0 3px #111;
+}
+
+.videos__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-size: cover;
   background-position: center;
+  filter: grayscale(100%);
 }
 
 .videos__placeholder {
@@ -49,7 +57,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(14, 86, 95, 0.9);
   padding: 10px;
   opacity: 0;
   transition: 0.3s;

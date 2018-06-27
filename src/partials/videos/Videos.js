@@ -11,16 +11,18 @@ const Videos = (props) => (
     {
       props.videos.map(video => (
         <Fade key={video.id}>
-          <li
-            className="videos__item"
-            style={{
-              backgroundImage: 'url(' + video.snippet.thumbnails.high.url + ')'
-            }}>
+          <li className="videos__item">
             <img
               className="videos__placeholder" 
               src={placeholder}
               alt=""
             />
+            <span
+              className="videos__thumb"
+              style={{
+                backgroundImage: 'url(' + video.snippet.thumbnails.high.url + ')'
+              }}>
+            </span>
             <span className="videos__overlay">
               <span className="videos__title">
                 {video.snippet.title}
