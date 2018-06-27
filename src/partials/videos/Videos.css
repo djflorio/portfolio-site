@@ -1,6 +1,18 @@
 .videos {
+  position: relative;
   padding: 65px;
-  background-color: #65b0db;
+  background-image: url('./img/clouds.gif');
+  background-size: cover;
+}
+
+.videos__bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(245, 138, 56);
+  opacity: 0.4;
 }
 
 .videos__list {
@@ -16,6 +28,9 @@
 .videos__item {
   position: relative;
   cursor: pointer;
+  border-radius: 3%;
+  overflow: hidden;
+  box-shadow: 0 0 3px #111;
 }
 
 .videos__thumb {

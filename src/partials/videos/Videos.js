@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 const Videos = (props) => (
   <section className="videos">
+    <span className="videos__bg-overlay"></span>
     <ul className="videos__list">
     {
       props.videos.map(video => (
