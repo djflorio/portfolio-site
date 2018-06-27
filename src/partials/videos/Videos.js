@@ -1,6 +1,7 @@
 import React from 'react';
 import './Videos.css';
 
+import placeholder from './img/16x9.png';
 import Fade from 'react-reveal/Fade';
 
 const Videos = (props) => (
@@ -10,10 +11,14 @@ const Videos = (props) => (
     {
       props.videos.map(video => (
         <Fade key={video.id}>
-          <li className="videos__item">
+          <li
+            className="videos__item"
+            style={{
+              backgroundImage: 'url(' + video.snippet.thumbnails.high.url + ')'
+            }}>
             <img
-              className="videos__thumb" 
-              src={video.snippet.thumbnails.high.url}
+              className="videos__placeholder" 
+              src={placeholder}
               alt=""
             />
             <span className="videos__overlay">
