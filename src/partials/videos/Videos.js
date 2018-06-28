@@ -13,16 +13,10 @@ const Videos = (props) => (
         <Fade key={video.id}>
           <li className="videos__item">
             <img
-              className="videos__placeholder" 
-              src={placeholder}
+              className="videos__thumb" 
+              src={video.snippet.thumbnails.high.url}
               alt=""
             />
-            <span
-              className="videos__thumb"
-              style={{
-                backgroundImage: 'url(' + video.snippet.thumbnails.high.url + ')'
-              }}>
-            </span>
             <span className="videos__overlay">
               <span className="videos__title">
                 {video.snippet.title}

@@ -1,24 +1,7 @@
 .videos {
-  position: relative;
   padding: 65px;
-  /*background-image: url('./img/branches1.png');*/
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position-x: -10px;
-  background: linear-gradient(#111, rgb(43, 66, 97));
+  background-color: #65b0db;
 }
-
-/*.videos__bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #f1e0a8;
-  opacity: 0.9;
-}
-*/
 
 .videos__list {
   list-style: none;
@@ -33,30 +16,14 @@
 .videos__item {
   position: relative;
   cursor: pointer;
+  border-radius: 3%;
   overflow: hidden;
   box-shadow: 0 0 3px #111;
 }
 
 .videos__thumb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(100%);
-}
-
-.videos__placeholder {
-  position: relative;
-  width: 100%;
   display: block;
-  background-image: url('./img/playbutton.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 1;
+  width: 100%;
 }
 
 .videos__overlay {
@@ -67,13 +34,13 @@
   bottom: 0;
   background-color: rgba(101, 120, 148, 0.8);
   padding: 10px;
-  opacity: 1;
+  opacity: 0;
   transition: 0.5s;
   z-index: 2;
 }
 
 .videos__overlay:hover {
-  background-color: rgba(14, 86, 95, 0.3);
+  opacity: 1;
 }
 
 .videos__title {
