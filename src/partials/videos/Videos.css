@@ -47,8 +47,14 @@
 }
 
 .videos__placeholder {
+  position: relative;
   width: 100%;
   display: block;
+  background-image: url('./img/playbutton.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 1;
 }
 
 .videos__overlay {
@@ -57,14 +63,15 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(14, 86, 95, 0.9);
+  background-color: rgba(14, 86, 95, 0.8);
   padding: 10px;
-  opacity: 0;
-  transition: 0.3s;
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 2;
 }
 
 .videos__overlay:hover {
-  opacity: 1;
+  background-color: rgba(14, 86, 95, 0.3);
 }
 
 .videos__title {
