@@ -2,10 +2,12 @@ import React from 'react';
 import './Videos.css';
 
 import placeholder from './img/16x9.png';
+import tree from './img/tree.png';
 import Fade from 'react-reveal/Fade';
 
 const Videos = (props) => (
   <section className="videos">
+    <img className="videos__tree" src={tree} />
     <span className="videos__bg-overlay"></span>
     <ul className="videos__list">
     {
