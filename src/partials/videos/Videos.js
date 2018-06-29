@@ -7,16 +7,30 @@ import tree2 from './img/tree2.png';
 import Fade from 'react-reveal/Fade';
 import YouTube from 'react-youtube';
 
-const VideoPlayer = (props) => (
-  <div className="vidplayer">
-    <div className="vidplayer__overlay"></div>
-    <YouTube videoId={props.videoId} />
-  </div>
-);
+const VideoPlayer = (props) => {
+
+  const {title, description, vId} = props.currentVideo;
+
+  return (
+    <div className="vidplayer">
+      <div className="vidplayer__overlay"></div>
+      <YouTube
+        className="vidplayer__player"
+        videoId={vId}
+      />
+      <h2 className="vidplayer__title">
+        {title}
+      </h2>
+      <p className="vidplayer__description">
+        {description}
+      </p>
+    </div>
+  );
+};
 
 const Videos = (props) => (
   <section className="videos">
-    <VideoPlayer videoId={props.currentVideo.vId} />
+    <VideoPlayer currentVideo={props.currentVideo} />
     <span className="videos__header">
       <img className="videos__tree" src={tree} />
       <img className="videos__tree2" src={tree2} />
