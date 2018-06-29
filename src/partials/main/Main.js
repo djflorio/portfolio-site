@@ -39,9 +39,9 @@ class Main extends React.Component {
     return (
       <section className="main" style={mainStyle}>
         <span className="main__sun" style={sunStyle}></span>
-        <img className="main__bird main__bird--1" src={bird} />
-        <img className="main__bird main__bird--2" src={bird} />
-        <img className="main__bird main__bird--3" src={bird} />
+        <img className="main__bird main__bird--1" src={bird} alt="bird" />
+        <img className="main__bird main__bird--2" src={bird} alt="bird" />
+        <img className="main__bird main__bird--3" src={bird} alt="bird" />
         <div className="main__content">
           <h1 className="main__title" style={titleStyle}>
             dan florio

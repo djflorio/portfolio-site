@@ -16,8 +16,8 @@ const Videos = (props) => (
     <VideoPlayer currentVideo={props.currentVideo} />
     <span className="videos__header">
       <Fade down>
-      <img className="videos__tree" src={tree} />
-      <img className="videos__tree2" src={tree2} />
+      <img className="videos__tree" src={tree} alt="tree" />
+      <img className="videos__tree2" src={tree2} alt="tree" />
       </Fade>
       <Fade right>
       <h1 className="videos__header-text">

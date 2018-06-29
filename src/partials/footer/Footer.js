@@ -15,7 +15,8 @@ const Footer = () =>{
         <a
           className="footer__link"
           href="http://www.danflorio.com"
-          target="_blank">
+          target="_blank"
+          rel="noopener noreferrer">
           Dan Florio
         </a>
         <br />
