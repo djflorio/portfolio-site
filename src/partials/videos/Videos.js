@@ -16,13 +16,13 @@ const Videos = (props) => (
     <VideoPlayer currentVideo={props.currentVideo} />
     <span className="videos__header">
       <Fade down>
-      <img className="videos__tree" src={tree} alt="tree" />
-      <img className="videos__tree2" src={tree2} alt="tree" />
+        <img className="videos__tree" src={tree} alt="tree" />
+        <img className="videos__tree2" src={tree2} alt="tree" />
       </Fade>
       <Fade right>
-      <h1 className="videos__header-text">
-        look
-      </h1>
+        <h1 className="videos__header-text">
+          look
+        </h1>
       </Fade>
     </span>
     <span className="videos__bg-overlay"></span>

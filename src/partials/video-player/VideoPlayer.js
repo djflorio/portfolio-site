@@ -30,9 +30,6 @@ const VideoPlayer = (props) => {
         <h2 className="vidplayer__title">
           {title}
         </h2>
-        <p className="vidplayer__description">
-          {description}
-        </p>
       </div>
     </div>
   );
