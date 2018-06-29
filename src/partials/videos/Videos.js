@@ -31,7 +31,9 @@ const Videos = (props) => (
     {
       props.videos.map(video => (
         <Fade key={video.id}>
-          <li className="videos__item">
+          <li
+            className="videos__item"
+            onClick={() => props.onVideoClick(video)}>
             <img
               className="videos__thumb" 
               src={video.snippet.thumbnails.high.url}
