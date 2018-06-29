@@ -1,12 +1,19 @@
+// Node modules
 import React from 'react';
-import './VideoPlayer.css';
 import { connect } from 'react-redux';
 
+// Assets
+import './VideoPlayer.css';
+
+// Actions
 import { closeVideoPlayer } from './VideoPlayerActions';
+
+// Components
 import VideoPlayer from './VideoPlayer';
 
 
 class VideoPlayerContainer extends React.Component {
+
   render() {
     if (this.props.open) {
       return (
@@ -19,6 +26,7 @@ class VideoPlayerContainer extends React.Component {
       return null;
     }
   }
+  
 };
 
 function mapStateToProps(state) {

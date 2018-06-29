@@ -1,8 +1,14 @@
+// Node modules
 import React from 'react';
 import { connect } from 'react-redux';
+
+// Actions
 import { doFetch, loadVideo } from './VideosActions';
 import { openVideoPlayer } from '../video-player/VideoPlayerActions';
+
+// Components
 import Videos from './Videos';
+
 
 class VideosContainer extends React.Component {
 

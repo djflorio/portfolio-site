@@ -1,12 +1,15 @@
+// Node modules
 import React from 'react';
-import './Videos.css';
 
-import placeholder from './img/16x9.png';
+// Assets
+import './Videos.css';
 import tree from './img/tree.png';
 import tree2 from './img/tree2.png';
 import Fade from 'react-reveal/Fade';
 
+// Components
 import VideoPlayer from '../video-player/VideoPlayerContainer';
+
 
 const Videos = (props) => (
   <section className="videos">

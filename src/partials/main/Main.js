@@ -1,10 +1,12 @@
+// Node modules
 import React from 'react';
-import './Main.css';
 
+// Assets
+import './Main.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import chevronDown from '@fortawesome/fontawesome-free-solid/faChevronCircleDown';
-
 import bird from './img/bird.png';
+
 
 class Main extends React.Component {
 

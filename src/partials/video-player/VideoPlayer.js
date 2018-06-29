@@ -1,7 +1,10 @@
+// Node modules
 import React from 'react';
+import YouTube from 'react-youtube';
+
+// Assets
 import './VideoPlayer.css';
 
-import YouTube from 'react-youtube';
 
 const VideoPlayer = (props) => {
 

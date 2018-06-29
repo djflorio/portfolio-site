@@ -1,5 +1,9 @@
+// Node modules
 import React from 'react';
+
+// Assets
 import './Footer.css';
+
 
 const Footer = () =>{
   const today = new Date();

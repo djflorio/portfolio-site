@@ -1,10 +1,13 @@
+// Node modules
 import React from 'react';
-import './Player.css';
-
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
+// Assets
+import './Player.css';
 import faPlay from '@fortawesome/fontawesome-free-solid/faPlay';
 import faPause from '@fortawesome/fontawesome-free-solid/faPause';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
+
 
 const Player = (props) => {
   const { title, album } = props.currentSong;

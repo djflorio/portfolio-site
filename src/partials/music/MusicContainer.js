@@ -1,10 +1,17 @@
+// Node modules
 import React from 'react';
 import { connect } from 'react-redux';
 
+// Actions
 import { doFetch, setAlbum } from './MusicActions';
-import { loadSong, playAudio, pauseAudio, updatePercentage, endSong } from '../player/PlayerActions';
+import {
+  loadSong, playAudio, pauseAudio,
+  updatePercentage, endSong
+} from '../player/PlayerActions';
 
+// Components
 import Music from './Music';
+
 
 class MusicContainer extends React.Component {
 

@@ -1,8 +1,13 @@
+// Node modules
 import React from 'react';
 import { connect } from 'react-redux';
+
+// Actions
+import { playAudio, pauseAudio, closePlayer } from './PlayerActions';
+
+// Components
 import Player from './Player';
 
-import { playAudio, pauseAudio, closePlayer } from './PlayerActions';
 
 class PlayerContainer extends React.Component {
 

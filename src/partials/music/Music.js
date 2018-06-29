@@ -1,15 +1,15 @@
+// Node modules
 import React from 'react';
 import classnames from 'classnames';
-import './Music.css';
-
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
+// Assets
+import './Music.css';
 import faPlay from '@fortawesome/fontawesome-free-solid/faPlay';
 import faPause from '@fortawesome/fontawesome-free-solid/faPause';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
-
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
-
 import tree from './img/treeblue.png';
 import tree2 from './img/tree2blue.png';
 import hare from './img/hare.png';
@@ -75,25 +75,25 @@ const Music = (props) => (
             }
           </div>
           <Fade cascade>
-          <ul className="music__tracks">
-            {
-              props.currentAlbum.tracks.map(track => (
-                <li
-                  key={track.id}
-                  className={classnames(
-                    "music__track",
-                    {"music__track--playing": props.currentSong === track}
-                  )}
-                  onClick={()=>props.onSongClick(track)}>
-                  <FontAwesomeIcon
-                    className="music__icon"
-                    icon={props.playing && props.currentSong === track ? faPause : faPlay}
-                  />
-                  {track.title}
-                </li>
-              ))
-            }
-          </ul>
+            <ul className="music__tracks">
+              {
+                props.currentAlbum.tracks.map(track => (
+                  <li
+                    key={track.id}
+                    className={classnames(
+                      "music__track",
+                      {"music__track--playing": props.currentSong === track}
+                    )}
+                    onClick={()=>props.onSongClick(track)}>
+                    <FontAwesomeIcon
+                      className="music__icon"
+                      icon={props.playing && props.currentSong === track ? faPause : faPlay}
+                    />
+                    {track.title}
+                  </li>
+                ))
+              }
+            </ul>
           </Fade>
         </div>
       }
