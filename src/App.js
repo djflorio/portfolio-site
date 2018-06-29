@@ -36,13 +36,8 @@ class App extends Component {
   }
 
   render() {
-
-    const style = {
-      overflow: this.props.videoPlayerOpen ? "hidden" : "auto"
-    };
-
     return (
-      <div className="App" style={style}>
+      <div className="App">
         <Player />
         <Main scrollY={this.state.scrollY} />
         <Music scrollY={this.state.scrollY} />
