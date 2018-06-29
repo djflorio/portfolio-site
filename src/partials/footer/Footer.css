@@ -6,6 +6,16 @@
   text-align: center;
 }
 
+.footer__link {
+  text-decoration: none;
+  color: #65b0db;
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: #efefef;
+}
+
 .footer__copyright {
   display: inline-block;
   margin: 0;

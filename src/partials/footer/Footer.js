@@ -7,7 +7,15 @@ const Footer = () =>{
   return (
     <section className="footer">
       <p className="footer__copyright">
-        &copy; {year} Dan Florio 
+        Website by&nbsp;
+        <a
+          className="footer__link"
+          href="http://www.danflorio.com"
+          target="_blank">
+          Dan Florio
+        </a>
+        <br />
+        &copy; {year}
       </p>
     </section>
   );

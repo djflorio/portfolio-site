@@ -1,8 +1,10 @@
 .music {
+  position: relative;
   padding: 65px;
   background-color: #111;
   color: #efefef;
   overflow-x: hidden;
+  z-index: 2;
 }
 
 .music__content {

@@ -12,11 +12,13 @@ const Videos = (props) => (
   <section className="videos">
     <VideoPlayer currentVideo={props.currentVideo} />
     <span className="videos__header">
+      <Fade down>
       <img className="videos__tree" src={tree} />
       <img className="videos__tree2" src={tree2} />
+      </Fade>
       <Fade right>
       <h1 className="videos__header-text">
-        videos
+        look
       </h1>
       </Fade>
     </span>
