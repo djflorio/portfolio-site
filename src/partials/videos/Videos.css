@@ -1,14 +1,39 @@
 .videos {
   position: relative;
-  padding: 300px 65px 65px 65px;
+  padding: 0 65px 65px 65px;
   background-color: #65b0db;
+}
+
+.videos__header {
+  display: block;
+  position: relative;
+  height: 300px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.videos__header-text {
+  position: absolute;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 70px;
+  color: #111;
+  top: 100px;
+  right: 50px;
+  margin: 0;
 }
 
 .videos__tree {
   position: absolute;
-  top: 0;
-  left: -50px;
-  width: 600px;
+  top: -50px;
+  left: 10px;
+  width: 400px;
+}
+
+.videos__tree2 {
+  position: absolute;
+  top: -50px;
+  left: 300px;
+  width: 250px;
 }
 
 .videos__list {
