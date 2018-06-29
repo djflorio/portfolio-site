@@ -12,6 +12,7 @@ import Fade from 'react-reveal/Fade';
 
 import tree from './img/treeblue.png';
 import tree2 from './img/tree2blue.png';
+import hare from './img/hare.png';
 
 
 const Music = (props) => (
@@ -21,6 +22,7 @@ const Music = (props) => (
         <h1 className="music__header-text">
           listen
         </h1>
+        <img className="music__hare" src={hare} /> 
       </Fade>
     </span>
     <div className="music__content">
