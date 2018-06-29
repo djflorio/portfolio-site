@@ -1,0 +1,33 @@
+.vidplayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  text-align: center;
+  color: #efefef;
+}
+
+.vidplayer__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.vidplayer__player {
+  position: relative;
+  z-index: 2;
+  margin-top: 100px;
+}
+
+.vidplayer__info {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: auto;
+}

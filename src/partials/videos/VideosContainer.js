@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { doFetch, loadVideo } from './VideosActions';
+import { openVideoPlayer } from '../video-player/VideoPlayerActions';
 import Videos from './Videos';
 
 class VideosContainer extends React.Component {
@@ -36,6 +37,7 @@ function mapDispatchToProps(dispatch) {
     },
     onVideoClick: (video) => {
       dispatch(loadVideo(video));
+      dispatch(openVideoPlayer());
     }
   }
 }

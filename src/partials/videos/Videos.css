@@ -65,7 +65,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(101, 120, 148, 0.8);
+  background-color: rgba(17, 17, 17, 0.9);
   padding: 10px;
   opacity: 0;
   transition: 0.5s;
@@ -79,37 +79,4 @@
 .videos__title {
   color: #efefef;
   font-size: 20px;
-}
-
-.vidplayer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
-  text-align: center;
-  color: #efefef;
-}
-
-.vidplayer__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: black;
-  opacity: 0.9;
-}
-
-.vidplayer__player {
-  position: relative;
-  z-index: 2;
-  margin-top: 100px;
-}
-
-.vidplayer__title,
-.vidplayer__description {
-  position: relative;
-  z-index: 2;
 }
