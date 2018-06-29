@@ -25,25 +25,7 @@
   font-family: 'Cabin Sketch', cursive;
   font-size: 70px;
   color: #65b0db;
-  top: 100px;
-  left: 50px;
   margin: 0;
-}
-
-.music__tree {
-  position: absolute;
-  top: -50px;
-  left: 10px;
-  width: 400px;
-  z-index: 2;
-}
-
-.music__tree2 {
-  position: absolute;
-  top: -50px;
-  left: 300px;
-  width: 250px;
-  z-index: 1;
 }
 
 .music__content {
@@ -191,5 +173,14 @@
 @media only screen and (max-width: 600px) {
   .music {
     padding: 0 20px 20px 20px;
+  }
+
+  .music__header-text {
+    font-size: 50px;
+  }
+
+  .music__hare {
+    height: 60px;
+    margin: 0 0 -3px 10px;
   }
 }
