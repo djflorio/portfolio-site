@@ -1,0 +1,12 @@
+.footer {
+  position: relative;
+  background-color: #111;
+  color: #efefef;
+  padding: 50px;
+  text-align: center;
+}
+
+.footer__copyright {
+  display: inline-block;
+  margin: 0;
+}

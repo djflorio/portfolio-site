@@ -6,6 +6,7 @@ import Main from './partials/main/Main';
 import Music from './partials/music/MusicContainer';
 import Videos from './partials/videos/VideosContainer';
 import Player from './partials/player/PlayerContainer';
+import Footer from './partials/footer/Footer';
 
 class App extends Component {
 
@@ -46,6 +47,7 @@ class App extends Component {
         <Main scrollY={this.state.scrollY} />
         <Music scrollY={this.state.scrollY} />
         <Videos />
+        <Footer />
       </div>
     );
   }
