@@ -82,3 +82,37 @@
   color: #efefef;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .videos {
+    padding: 0 20px 20px 20px;
+  }
+
+  .videos__header {
+    height: 150px;
+  }
+
+  .videos__header-text {
+    font-size: 70px;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .videos__tree {
+    top: -10px;
+    left: -40px;
+    width: 150px;
+  }
+  
+  .videos__tree2 {
+    top: -10px;
+    left: 70px;
+    width: 80px;
+  }
+
+  .videos__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    max-width: 1000px;
+  }
+}

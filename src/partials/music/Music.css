@@ -187,3 +187,9 @@
 .music__icon {
   margin-right: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  .music {
+    padding: 0 20px 20px 20px;
+  }
+}
