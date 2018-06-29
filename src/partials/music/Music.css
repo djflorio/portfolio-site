@@ -66,20 +66,6 @@
   opacity: 1;
 }
 
-.album__info {
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-}
-
-.album__title {
-  margin: 0;
-}
-
-.album__year {
-  margin: 0;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -93,6 +79,7 @@
 .music__header {
   text-align: center;
   white-space: nowrap;
+  margin-top: 20px;
 }
 
 .music__header-center {
