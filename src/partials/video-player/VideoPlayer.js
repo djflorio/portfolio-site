@@ -16,10 +16,14 @@ const VideoPlayer = (props) => {
         className="vidplayer__overlay"
         onClick={props.onOverlayClick}>
       </div>
-      <YouTube
-        className="vidplayer__player"
-        videoId={vId}
-      />
+      <div className="vidplayer__embed-container">
+        <div className="vidplayer__embed">
+          <YouTube
+            className="vidplayer__player"
+            videoId={vId}
+          />
+        </div>
+      </div>
       <div
         className="vidplayer__info"
         onClick={props.onOverlayClick}>
