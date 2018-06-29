@@ -10,9 +10,19 @@ import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 
+import tree from './img/treeblue.png';
+import tree2 from './img/tree2blue.png';
+
 
 const Music = (props) => (
   <section className="music">
+    <span className="music__header">
+      <Fade right>
+        <h1 className="music__header-text">
+          listen
+        </h1>
+      </Fade>
+    </span>
     <div className="music__content">
       <Zoom cascade>
         <ul className="albums">
@@ -45,7 +55,7 @@ const Music = (props) => (
       {
         props.currentAlbum !== null &&
         <div className="music__info">
-          <div className="music__header">
+          <div className="music__album-header">
             <h1 className="music__title">{props.currentAlbum.title}</h1>
             <h2 className="music__year">{props.currentAlbum.year}</h2>
           </div>
