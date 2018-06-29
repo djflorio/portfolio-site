@@ -39,6 +39,9 @@
   overflow: hidden;
   max-width: 100%;
   margin: auto;
+  background-image: url('./img/loader.gif');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .vidplayer__player { 
