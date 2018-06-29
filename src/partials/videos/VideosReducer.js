@@ -2,7 +2,8 @@ import * as actions from './VideosActions';
 
 export const defaultState = {
   fetching: false,
-  data: []
+  videos: [],
+  currentVideo: {}
 }
 
 const videos = (state=defaultState, action) => {
@@ -17,13 +18,20 @@ const videos = (state=defaultState, action) => {
       return {
         ...state,
         fetching: false,
-        data: action.payload
+        videos: action.videos,
+        currentVideo: action.currentVideo
       }
     }
     case actions.VIDEOS_FETCH_FAILED: {
       return {
         ...state,
         fetching: false
+      }
+    }
+    case actions.LOAD_VIDEO: {
+      return {
+        ...state,
+        currentVideo: action.video
       }
     }
     default: return state;
