@@ -80,7 +80,7 @@
 
 .videos__title {
   color: #efefef;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -102,6 +102,10 @@
     left: 200px;
     width: 200px;
     z-index: 1;
+  }
+
+  .videos__title {
+    font-size: 12px;
   }
 }
 
