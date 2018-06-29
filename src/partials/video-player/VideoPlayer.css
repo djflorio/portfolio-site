@@ -17,6 +17,7 @@
   bottom: 0;
   background-color: black;
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .vidplayer__player {
@@ -30,4 +31,5 @@
   z-index: 2;
   max-width: 1000px;
   margin: auto;
+  cursor: pointer;
 }

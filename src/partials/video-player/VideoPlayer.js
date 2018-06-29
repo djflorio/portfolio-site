@@ -17,7 +17,9 @@ const VideoPlayer = (props) => {
         className="vidplayer__player"
         videoId={vId}
       />
-      <div className="vidplayer__info">
+      <div
+        className="vidplayer__info"
+        onClick={props.onOverlayClick}>
         <h2 className="vidplayer__title">
           {title}
         </h2>
