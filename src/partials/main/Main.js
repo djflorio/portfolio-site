@@ -47,8 +47,11 @@ class Main extends React.Component {
             dan florio
           </h1>
           <p className="main__text" style={textStyle}>
-            ...is a solo artist, multi instrumentalist, producer, and
-            computer programmer  who writes and records music about dirt,
+            ...is a solo artist, multi instrumentalist, producer, and&nbsp;
+            <a
+              href="http://www.danflorio.com"
+              className="main__link"
+              target="_blank">programmer</a> who writes and records music about dirt,
             nostalgia, dreams, animals, and bodies of water.
           </p>
         </div>

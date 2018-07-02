@@ -9,6 +9,18 @@
   z-index: -1;
   transition: 3s;
   overflow: hidden;
+  z-index: 2;
+}
+
+.main__link {
+  color: rgb(252, 230, 172);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.main__link:hover {
+  color: #efefef;
+  text-shadow: 0 0 5ps #efefef;
 }
 
 .main__content {
@@ -19,7 +31,7 @@
   background-repeat: repeat-x;
   background-size: 1000px;
   padding: 30px;
-  z-index: 2;
+  z-index: 6;
 }
 
 .main__sun {
