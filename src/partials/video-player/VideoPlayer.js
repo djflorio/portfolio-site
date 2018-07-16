@@ -8,7 +8,7 @@ import './VideoPlayer.css';
 
 const VideoPlayer = (props) => {
 
-  const {title, description, vId} = props.currentVideo;
+  const {title, vId} = props.currentVideo;
 
   return (
     <div className="vidplayer">

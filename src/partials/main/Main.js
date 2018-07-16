@@ -51,7 +51,8 @@ class Main extends React.Component {
             <a
               href="http://www.danflorio.com"
               className="main__link"
-              target="_blank">programmer</a> who writes and records music about dirt,
+              target="_blank"
+              rel="noopener noreferrer">programmer</a> who writes and records music about dirt,
             nostalgia, dreams, animals, and bodies of water.
           </p>
         </div>
