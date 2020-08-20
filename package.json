@@ -12,7 +12,7 @@
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "react-reveal": "^1.2.2",
-    "react-scripts": "1.1.4",
+    "react-scripts": "3.4.3",
     "react-youtube": "^7.6.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
@@ -26,5 +26,17 @@
   "homepage": "http://www.danfloriomusic.com",
   "devDependencies": {
     "redux-logger": "^3.0.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
